@@ -27,7 +27,7 @@ for i in $(find * -depth -maxdepth 1 -type d)  ; do
 rm -rf /tmp/${i}
 mkdir -p ${i}
 
-time ./test.sh /tmp/${i} $HOME/scale/SCALE gfx1100 ${i} &> ${RESULTDIR}/${i}.log
+time ./test.sh /tmp/${i} /opt/scale gfx1100 ${i} &> ${RESULTDIR}/${i}.log
 
 
 done
