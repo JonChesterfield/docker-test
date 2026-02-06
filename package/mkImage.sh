@@ -57,10 +57,10 @@ OUTPUT_NAME="redscale-jc-${IMAGE}${DOCKER_TAG}"
 OUTPUT_TYPE=image
 
 
+# test
 docker build \
-    --progress=plain -f "${IMAGE}.dockerfile" \
+    -f "${IMAGE}.dockerfile" \
     ${DOCKER_BUILD_EXTRA_ARGS:-} \
-    --output="type=${OUTPUT_TYPE},oci-mediatypes=true,compression=zstd,force-compression=true,name=${OUTPUT_NAME}" .
+    -t "${OUTPUT_NAME}" .
 
 
-cd -
