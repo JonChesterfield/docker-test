@@ -56,10 +56,8 @@ echo "Using BASE_DOCKER_TAG $BASE_DOCKER_TAG"
 OUTPUT_NAME="redscale-jc-${IMAGE}${DOCKER_TAG}"
 OUTPUT_TYPE=image
 
-docker buildx build \
-    --build-arg BASE_DOCKER_TAG="${BASE_DOCKER_TAG}" \
-    --build-arg CI_UID=$CI_UID \
-    --build-arg ROCM_VERSION=$ROCM_VERSION \
+
+docker build \
     --progress=plain -f "${IMAGE}.dockerfile" \
     ${DOCKER_BUILD_EXTRA_ARGS:-} \
     --output="type=${OUTPUT_TYPE},oci-mediatypes=true,compression=zstd,force-compression=true,name=${OUTPUT_NAME}" .
