@@ -10,3 +10,5 @@ COPY installDeps.sh /tmp/installDeps.sh
 
 RUN chmod +x /tmp/installDeps.sh && /tmp/installDeps.sh && rm /tmp/installDeps.sh
 
+ADD run-validation.sh /root/run-validation.sh
+
