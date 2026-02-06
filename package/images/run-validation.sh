@@ -16,8 +16,8 @@ fi
 
 
 
-rm -rf ${RESULTDIR}
-mkdir ${RESULTDIR}
+rm -rf ${RESULTDIR}/*
+mkdir -p ${RESULTDIR}
 
 cd $HOME/scale-validation
 
