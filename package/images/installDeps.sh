@@ -107,6 +107,11 @@ apt-get update
         # arrayfire
         libfftw3-dev
         libatlas-base-dev
+
+        # HeCBench
+        pipx
+        libboost-regex-dev
+
     )
     
     apt-get install -y "${PACKAGES[@]}"
