@@ -8,6 +8,7 @@ apt-get update
     PACKAGES=(
         # CI system.
         rsync
+        cmake
 
         # Packages for testing.
         libbenchmark-dev
@@ -111,6 +112,9 @@ apt-get update
         # HeCBench
         pipx
         libboost-regex-dev
+
+        # Whisper
+        libsdl2-dev
 
     )
     
